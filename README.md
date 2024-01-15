@@ -1,22 +1,25 @@
 # Potloc Technical Test: Topic Modeling  
 
-## Setup environment:
+## Setup environment
 1. Create a python environment:
    
    ```bash
     python -m venv env
    ```
-2. Install project dependencies:
-   ```bash
-    pip install -r requirements.txt
-   ```
-3. Activate envrionment:
+
+2. Activate envrionment:
    ```
    cd env/Scripts
    activate
    ```
 
-## Train BertTopic:
+3. Install project dependencies:
+   ```bash
+    pip install -r requirements.txt
+   ```
+
+
+## Train BertTopic
 1. Make sure that the dataset is placed in the correct folder `data/raw/technical-test-dataset.csv`.
 2. Activate the environment `env`.
    
@@ -32,7 +35,7 @@
    ```
 This will train a BertTopic model on the dataset using the 'best_answers' column. The trained model will be saved in the `data/models/bertopic/` folder.
 
-## Run inference server:
+## Run inference server
 The inference API is created using **FastAPI**. To run the inference server, execute the following command from the `src/` folder:
 ```
 uvicorn inference_server:app
