@@ -1,5 +1,7 @@
 # Potloc Technical Test: Topic Modeling  
 
+This project involves training a topic modeling model, specifically BERTopic, to group text (answers) into 20 topics. A simple inference API is then created using FastAPI for testing the trained model. Below are detailed instructions on how to configure and run the project.
+
 ## Setup environment
 1. Create a python environment:
    
@@ -53,9 +55,9 @@ curl -X 'POST' \
 ```
 
 ## What can be improved?
-- **Model performance and evaluation**: Train different models and variations of those models on this dataset and compare their performances in order to pick the best models. One tricky part though is the fact that evaluating topic models can be rather difficult due to the somewhat subjective nature of evaluation. Some  techniques such as cluster analysis, topics' similarties can be used to help ease up the process.  Moreover, hyperparamters such as the number of topics and the topics themselves would defined depending on the project/client requirements and constraints.
+- **Model performance and evaluation**: Train different models and variations of those models on this dataset and compare their performances to pick the best models. One tricky part though is the fact that evaluating topic models can be rather difficult due to the somewhat subjective nature of evaluation. Some techniques such as cluster analysis, topics' similarties calculations, etc.. can be used to help ease up the process.  Moreover, hyperparameters such as the number of topics and the topics themselves would be defined depending on the project/client requirements and constraints.
 - **Inference**:
-    Inference speed optimization can be achieved by a variety of ways:
+    Inference speed optimization can be achieved in a variety of ways:
     - *Using GPUs*: This is the most straightforward way if we're using DL/ML models that support GPU operations. However, GPUs usually give rise to high operational costs, which, depending on the project/budget, can be unacceptable.
-    - *Model optimizations*: This can be model dependent. One way is to use AI engines such as ONNX to speed up inference. This can be very usefull when the use of GPUs is limited and the model needs to be run on CPUs as it offers reduced inference latency.
-    - *Reducing model size*: Transformers models are usually more resources intensive, so choosing another model, such as LDA, can be beneficial in resource-constrained production envrionments.
+    - *Model optimizations*: This can be model dependent. One way is to use AI engines such as ONNX to speed up inference. This can be very useful when the use of GPUs is limited and the model needs to be run on CPUs as it offers reduced inference latency.
+    - *Reducing model size*: Transformers models are usually more resource intensive, so choosing another model, such as LDA, can be beneficial in resource-constrained production environments.
